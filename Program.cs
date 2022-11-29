@@ -12,7 +12,7 @@ Agencia01.AddConta(conta3232);
 
 Sistema.Extrato(conta3232);
 Sistema.Deposito(1200.6f, conta3232);
-Sistema.Extrato(conta3232);
 
-Sistema.Saque(3200.12f, conta3232);
-Sistema.Extrato(conta3232);
+Sistema.Saque(1000.12f, conta3232);
+
+

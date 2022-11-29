@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 public class Agencia
 {
     public string NumAgencia { get; set; }

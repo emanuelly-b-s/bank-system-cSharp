@@ -1,37 +1,12 @@
+using System;
+
 public class Conta 
 {
-    public string? NumeroConta { get; set; }
-    public Cliente? Propietario { get; set; }
-    public Agencia? Agencia { get; set; }
+    public string NumeroConta { get; set; }
+    public Cliente Propietario { get; set; }
+    public Agencia Agencia { get; set; }
     public double Saldo { get; set; }
 
-    
-
-    public void Deposito(double valor)
-    {
-        this.Saldo += valor;
-    } 
-    public void Extrato()
-    {
-        Console.WriteLine(Saldo);
-    } 
-    public void Saque(double valor)
-    {
-        if (valor <= Saldo)
-            this.Saldo -= valor;
-        else
-            Console.WriteLine("Saldo insuficiente");
-    } 
-
-
-    public void Pix(double valor, Conta destino)
-    {
-        if(valor < Saldo)
-        {
-            this.Saldo -= valor;
-            destino.Deposito(valor);
-        }
-    }
 
 }
 

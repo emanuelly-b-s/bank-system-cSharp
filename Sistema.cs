@@ -1,11 +1,8 @@
 public static class Sistema
 {
-    public static Cliente? Propientario { get; set; }
-    public static void Deposito(float valor, Conta conta)
-    {
-        conta.Deposito(valor);
-        Console.WriteLine($"Novo saldo: {conta.Saldo}");
-    }
-    public static void Saque(float valor, Conta conta) => conta.Saque(valor);
-    public static void Extrato(Conta conta) => conta.Extrato();
+    public static Cliente Propietario { get; set; }
+    public static Agencia Agencia { get; set; }
+    public static void Deposito(float valor, Conta conta) => Opcoes.Deposito(valor, conta);
+    public static void Saque(float valor, Conta conta) => Opcoes.Saque(valor, conta);
+    public static void Extrato(Conta conta) => Opcoes.Extrato(conta);
 }
