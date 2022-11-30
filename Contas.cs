@@ -13,7 +13,7 @@ public class Conta
         Console.WriteLine($"Novo Saldo: {this.Saldo:0.##}");
     }
 
-    public virtual void Extrato(Conta conta) => Console.WriteLine(conta.Saldo);
+    public virtual void Extrato() => Console.WriteLine(this.Saldo);
 
     public virtual void Saque(double valor)
     {
