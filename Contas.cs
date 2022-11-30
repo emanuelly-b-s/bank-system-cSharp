@@ -7,6 +7,33 @@ public class Conta
     public Agencia Agencia { get; set; }
     public double Saldo { get; set; }
 
+    public virtual void Deposito(double valor) 
+    {
+        this.Saldo += valor;
+        Console.WriteLine($"Novo Saldo: {this.Saldo:0.##}");
+    }
+
+    public virtual void Extrato(Conta conta) => Console.WriteLine(conta.Saldo);
+
+    public virtual void Saque(double valor)
+    {
+        if (valor <= this.Saldo)
+        {
+            this.Saldo -= valor;
+            Console.WriteLine($"Novo Saldo: {this.Saldo:0.##}");
+        }
+        else
+            Console.WriteLine("Saldo insuficiente");
+    }
+
+    public virtual void Pix(double valor, Conta destino, Conta conta)
+    {
+        if(valor < conta.Saldo)
+        {
+            conta.Saldo -= valor;
+            destino.Saldo += valor;
+        }
+    } 
 
 }
 
