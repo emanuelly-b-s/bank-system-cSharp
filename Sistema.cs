@@ -5,6 +5,7 @@ using System;
 
 public static class Sistema
 {
+
     public static Cliente Propietario { get; set; }
     public static Agencia Agencia { get; set; }
     public static void Deposito(float valor, Conta conta) => conta.Deposito(valor);
@@ -18,7 +19,7 @@ public static class Sistema
             WriteLine("Digite o tipo de conta que deseja criar: ");
             WriteLine("(1) - Conta Corrente\n(2)-Conta Poupança");
             int op = int.Parse(ReadLine());
-            Agencia Agencia01 = new Agencia("2202");
+
             switch (op)
             {
                 case 1:
@@ -27,12 +28,17 @@ public static class Sistema
                     Cliente cliente = new Cliente();
                     Random randNmConta = new Random();
                     string conta = Convert.ToString(randNmConta.Next(1000, 5000));
-                    ContaCorrente contaCliente = new ContaCorrente(conta, cliente, Agencia01, 00.0f);
+                    Agencia01 agCliente = new Agencia01();
+                    ContaCorrente contaCliente = new ContaCorrente(conta,
+                                                                   cliente,
+                                                                   agCliente,
+                                                                   00.0f);
                     cliente.Nome = nomeCliente;
                     cliente.AddConta(contaCliente);
                     WriteLine("Digite seu CPF: ");
                     string CPF = ReadLine();
                     cliente.AddCPF(CPF);
+                    agCliente.AddConta(contaCliente);
                     bool rodar = true;
                     while (rodar)
                     {
@@ -59,6 +65,9 @@ public static class Sistema
                             case 3:
                                 contaCliente.Extrato();
                                 Console.ReadKey(true);
+                                break;
+                            case 4:
+
                                 break;
                         }
                     }
