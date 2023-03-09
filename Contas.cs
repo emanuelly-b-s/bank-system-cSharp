@@ -50,11 +50,16 @@ public class ContaCorrente : Conta
 
 public class ContaPoupanca : Conta 
 {
-    public ContaPoupanca(string numConta, Cliente cliente, Agencia agencia, double saldo)
+    public double TaxaRendimento { get; set; }
+    public string TipoDeInvestimento { get; set; }
+
+    public ContaPoupanca(string numConta, Cliente cliente, Agencia agencia, double saldo, double txRend, string tpInvestimeto)
     {
         this.NumeroConta = numConta;
         this.Propietario = cliente;
         this.Agencia = agencia;
         this.Saldo = saldo;
+        this.TaxaRendimento = txRend;
+        this.TipoDeInvestimento = tpInvestimeto;
     }
 }
