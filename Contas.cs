@@ -26,15 +26,6 @@ public class Conta
             Console.WriteLine("Saldo insuficiente");
     }
 
-    public virtual void Pix(double valor, Conta destino, Conta conta)
-    {
-        if(valor < conta.Saldo)
-        {
-            conta.Saldo -= valor;
-            destino.Saldo += valor;
-        }
-    } 
-
 }
 
 public class ContaCorrente : Conta 
