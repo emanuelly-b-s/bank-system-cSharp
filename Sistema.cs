@@ -40,7 +40,6 @@ public static class Sistema
                         WriteLine("(1) Deposito: ");
                         WriteLine("(2) Saque: ");
                         WriteLine("(3) Extrato: ");
-                        WriteLine("(4) Pix: ");
                         int opEmConta = int.Parse(ReadLine());
                         switch (opEmConta)
                         {
@@ -60,7 +59,7 @@ public static class Sistema
                                 contaCliente.Extrato();
                                 Console.ReadKey(true);
                                 break;
-                        }
+                        }   
                     }
                     
                 break;
