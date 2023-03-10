@@ -11,7 +11,7 @@ public static class Sistema
     public static void Deposito(float valor, Conta conta) => conta.Deposito(valor);
     public static void Saque(float valor, Conta conta) => conta.Saque(valor);
     public static void Extrato(Conta conta) => conta.Extrato();
-    
+
     public static void CriarConta()
     {
         while (true)
@@ -46,7 +46,7 @@ public static class Sistema
                         WriteLine("(1) Deposito: ");
                         WriteLine("(2) Saque: ");
                         WriteLine("(3) Extrato: ");
-                        WriteLine("(4) Pix: ");
+                        WriteLine("(4) Sair: ");
                         int opEmConta = int.Parse(ReadLine());
                         switch (opEmConta)
                         {
@@ -69,12 +69,26 @@ public static class Sistema
                             case 4:
 
                                 break;
+                            case 4:
+                                WriteLine("Tem certeza que deseja sair: ");
+                                int sair = int.Parse(ReadLine());
+                                switch (sair)
+                                {
+                                    case 1:
+                                        break;
+                                    case 2:
+                                        continue;
+                                }
+                                Console.ReadKey(true);
+                                break;
                         }
                     }
-                    
-                break;
+
+                    break;
+        
             }
-                
+
         }
+
     }
 }

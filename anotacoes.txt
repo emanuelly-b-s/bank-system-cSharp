@@ -1,0 +1,5 @@
+https://rubikscode-net.translate.goog/2022/07/25/c-mongodb-guide/?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt-BR&_x_tr_pto=sc
+https://mongodb-github-io.translate.goog/mongo-csharp-driver/2.4/apidocs/html/T_MongoDB_Driver_MongoClient.htm?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt-BR&_x_tr_pto=sc
+https://zetcode-com.translate.goog/csharp/mongodb/?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt-BR&_x_tr_pto=sc
+https://www-c--sharpcorner-com.translate.goog/UploadFile/87b416/getting-started-mongodbwithcsharp/?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt-BR&_x_tr_pto=sc
+https://www-partech-nl.translate.goog/en/publications/2022/02/how-to-connect-to-mongodb-from-c-sharp?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt-BR&_x_tr_pto=sc#
